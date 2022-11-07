@@ -18,7 +18,7 @@ fs.promises.writeFile(bundlePath, '')
 
         cssFiles = files.filter((file) => path.parse(file.name).ext === '.css');
         for (let i = 0; i < cssFiles.length; i++) {
-          console.log(`reading file ${files[i].name}`);
+          console.log(`reading file ${cssFiles[i].name}`);
           let readStream = fs.createReadStream(path.join(__dirname, 'styles', cssFiles[i].name));
 
           readStream.pipe(writeStream);
